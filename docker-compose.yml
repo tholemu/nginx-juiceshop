@@ -1,0 +1,14 @@
+services:
+    nginx-juiceshop:
+        image: nginx-juiceshop
+        ports:
+            - 8080:80
+        restart: always
+ 
+    juiceshop:
+        depends_on:
+            - nginx-juiceshop
+        image: bkimminich/juice-shop
+        ports:
+            - 3030:3000
+        restart: always
