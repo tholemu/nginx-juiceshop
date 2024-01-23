@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginxplus
 RUN rm /etc/nginx/conf.d/default.conf
 COPY conf/default.conf /etc/nginx/conf.d/default.conf
 COPY conf/juiceshop.conf /etc/nginx/conf.d/juiceshop.conf
